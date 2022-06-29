@@ -10,5 +10,6 @@ $(document).ready(function(){
         }else {
             location.href="../informatique/Web/Utiliser-WebEdit.html";
         }
+        IsLoad=1;
     }
 });
