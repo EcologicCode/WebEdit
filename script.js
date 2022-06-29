@@ -7,8 +7,9 @@ $(document).ready(function(){
         if(search_params.has('code')) {
             var code = search_params.get('code');
             if(!search_params.has('JavaScript')){
-            $("#docu").html("<div style=\"background-color:rgb(0, 0, 0);color:white\"><a href=\""+str+"&JavaScript=true\"Javascript ?</div><br>"+code);
+            $("#docu").html("<div style=\"background-color:rgb(0, 0, 0);color:rgb(255, 255, 255);\"><a href=\""+str+"&JavaScript=true\"Javascript ?</a></div><br>"+code);
             }else {
+                $("#docu").html(code);
                 if(search_params.has('script')){
                     var Script = search_params.get('script');
                     $.getScript(Script);
