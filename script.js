@@ -6,7 +6,7 @@ $(document).ready(function(){
         var search_params = new URLSearchParams(url.search); 
         if(search_params.has('code')) {
             var code = search_params.get('code');
-            document.write(code);
+            $("#docu").html(code);
         }else {
             location.href="../informatique/Web/Utiliser-WebEdit.html";
         }
