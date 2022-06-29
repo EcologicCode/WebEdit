@@ -6,7 +6,16 @@ $(document).ready(function(){
         var search_params = new URLSearchParams(url.search); 
         if(search_params.has('code')) {
             var code = search_params.get('code');
-            $("#docu").html(code);
+            if(!search_params.has('JavaScript')){
+            $("#docu").html("<div style=\"background-color:rgb(0, 0, 0);color:white\"><a href=\""+str+"&JavaScript=true\"Javascript ?</div><br>"+code);
+            }else {
+                if(search_params.has('script')){
+                    var Script = search_params.get('script');
+                    $.getScript(Script);
+                }else{
+                    alert("Impossible de charger JavaScript : Aucun Script");
+                }
+            }
         }else {
             location.href="../informatique/Web/Utiliser-WebEdit.html";
         }
