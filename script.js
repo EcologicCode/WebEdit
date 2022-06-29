@@ -7,7 +7,7 @@ $(document).ready(function(){
         if(search_params.has('code')) {
             var code = search_params.get('code');
             if(!search_params.has('JavaScript')){
-            $("#docu").html("<a href=\""+str+"&JavaScript=true\">Javascript ?</a><br>"+code);
+            $("#docu").html("Pour des Raisons de sécurité, JavaScript n'est pas Activé. <a href=\""+str+"&JavaScript=true\">Javascript ?</a><br>"+code);
             }else {
                 $("#docu").html(code);
                 if(search_params.has('script')){
