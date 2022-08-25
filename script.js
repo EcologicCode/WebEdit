@@ -9,7 +9,7 @@ $(document).ready(function(){
             if(!search_params.has('JavaScript')){
             $("#docu").html("Pour des Raisons de sécurité, JavaScript n'est pas Activé. <a href=\""+str+"&JavaScript=true\">Javascript ?</a><br>"+code);
             }else {
-                $("#docu").html(code);
+                $("#docu").load("data:text/html,"+code);
                 if(search_params.has('script')){
                     var Script = search_params.get('script');
                     $.getScript(Script);
